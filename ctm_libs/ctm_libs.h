@@ -47,6 +47,7 @@ int		ft_strchr(char *s, int n);
 char	*ft_strdup(char *s);
 int		ft_strlen(char *str);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_strcmp(char *s1, char *s2);
 char	*ft_strrchr(char *s, int n);
 char	*ft_strnstr(char *big, char *little, unsigned int len);
 char	ft_tolower(char c);
