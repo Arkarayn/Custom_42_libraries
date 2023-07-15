@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmattei <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 15:12:42 by gmattei           #+#    #+#             */
-/*   Updated: 2022/10/03 15:12:43 by gmattei          ###   ########.fr       */
+/*   Created: 2023/06/03 10:42:49 by gmattei           #+#    #+#             */
+/*   Updated: 2023/06/03 10:42:50 by gmattei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ctm_libs.h"
 
-int	ft_strlen(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-
-	if (str == NULL)
-		return (0);
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	while (*s1 != '\0' && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return ((*(unsigned char *)s1 - *(unsigned char *)s2));
 }

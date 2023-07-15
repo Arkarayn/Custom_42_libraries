@@ -21,13 +21,13 @@ char	*ft_strjoin(char *s1, char *s2)
 	c = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (c == NULL)
 		return (c);
-	while (*s1)
+	while (s1 && *s1)
 	{
 		c[i] = *s1;
 		i++;
 		s1++;
 	}
-	while (*s2)
+	while (s2 && *s2)
 	{
 		c[i] = *s2;
 		i++;
