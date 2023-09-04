@@ -12,17 +12,13 @@
 
 #include "ctm_libs.h"
 
-void	*ft_calloc(unsigned int nmemb, unsigned int size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int		i;
-	char	*c;
+	void	*p;
 
-	i = 0;
-	c = malloc(nmemb * size);
-	while ((unsigned int)i < nmemb)
-	{
-		c[i] = 0;
-		i++;
-	}
-	return (c);
+	p = malloc(nmemb * size);
+	if (!p)
+		return (NULL);
+	ft_bzero(p, nmemb * size);
+	return (p);
 }

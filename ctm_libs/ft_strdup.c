@@ -12,24 +12,20 @@
 
 #include "ctm_libs.h"
 
-char	*ft_strdup(char *s)
+char	*ft_strdup(char *s1)
 {
+	char	*dup;
 	int		i;
-	char	*c;
 
 	i = 0;
-	while (s[i] != '\0')
-		i++;
-	c = malloc(i * sizeof(char) + 1);
-	if (c != NULL)
+	dup = malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (!dup)
+		return (NULL);
+	while (s1[i])
 	{
-		i = 0;
-		while (s[i] != '\0')
-		{
-			c[i] = s[i];
-			i++;
-		}
+		dup[i] = s1[i];
+		i++;
 	}
-	c[i] = '\0';
-	return (c);
+	dup[i] = 0;
+	return (dup);
 }

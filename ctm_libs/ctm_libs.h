@@ -30,7 +30,7 @@ typedef struct s_list
 
 int		ft_atoi(char *str);
 void	*ft_bzero(void *s, unsigned int n);
-void	*ft_calloc(unsigned int nmemb, unsigned int size);
+void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -61,7 +61,7 @@ char	*ft_strmapi(char *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
+int		ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -74,8 +74,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 size_t	ft_strlcat(char *dest, char *src, unsigned int size);
 size_t	ft_strlcpy(char *dest, char *src, unsigned int size);
-int	ft_strcsrc(char *str, char c);
-int	ft_mtxcsrc(char **matrix, char c);
+int		ft_strcsrc(char *str, char c);
+int		ft_mtxcsrc(char **matrix, char c);
 /*LIBFT*/
 char	*get_next_line(int fd);
 size_t	ft_strleni(const char *s);
@@ -87,13 +87,13 @@ void	*my_free(char *s);
 char	*splitjoin(char *s1, char *s2, char *p);
 char	*ft_leggi(int fd, int *i);
 /*GET_NEXT_LINE*/
-int	ft_print(const char *str, va_list args);
-int	ft_printf(const char *str, ...);
-int	ft_puthex_plus_count(unsigned long n, char uppercase);
-int	ft_puthexp_plus_count(unsigned long n, int x);
-int	ft_putnbr_plus_count(int n);
-int	ft_putstr_plus_count(char *s);
-int	ft_putunbr_plus_count(long int n);
+int		ft_print(const char *str, va_list args);
+int		ft_printf(const char *str, ...);
+int		ft_puthex_plus_count(unsigned long n, char uppercase);
+int		ft_puthexp_plus_count(unsigned long n, int x);
+int		ft_putnbr_plus_count(int n);
+int		ft_putstr_plus_count(char *s);
+int		ft_putunbr_plus_count(long int n);
 /*PRINTF*/
 
 #endif
